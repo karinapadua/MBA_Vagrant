@@ -27,7 +27,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "springapp" do |springapp|
     springapp.vm.network "private_network", ip: "10.80.4.14"
-    springapp.vm.network "forwarded_port", guest: 8080, host: 8080
+    springapp.vm.network "forwarded_port", guest: 8080, host: 3306
 
     springapp.vm.provider "virtualbox" do |vb|
       vb.name = "springapp"
